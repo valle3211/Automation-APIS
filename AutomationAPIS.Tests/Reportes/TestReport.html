@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
+<title>Reporte de pruebas</title><style>
+
+        * { box-sizing: border-box; }
+        body { margin:0; font-family: 'Segoe UI', Arial, sans-serif; background:#0f1620; color:#d7dde5; }
+        .topbar { background:#0a0f16; padding:14px 20px; border-bottom:1px solid #1e2733; }
+        .logo { color:#4da3ff; font-weight:600; font-size:16px; }
+        .layout { display:flex; height:calc(100vh - 49px); }
+        .sidebar { width:340px; border-right:1px solid #1e2733; overflow-y:auto; background:#0f1620; }
+        .sidebar-header { padding:14px 16px; font-size:13px; color:#8b96a5; border-bottom:1px solid #1e2733; text-transform:uppercase; letter-spacing:.5px; }
+        .test-item { display:flex; justify-content:space-between; align-items:center; padding:12px 16px; border-bottom:1px solid #1a222c; cursor:pointer; }
+        .test-item:hover { background:#151d28; }
+        .test-item.active { background:#16212c; border-left:3px solid #4da3ff; }
+        .test-item-name { font-size:14px; color:#e7ecf2; margin-bottom:4px; }
+        .test-item-meta { font-size:12px; color:#7c8794; }
+        .details-pane { flex:1; overflow-y:auto; padding:24px 32px; }
+        .detail-panel { display:none; flex-direction:column; gap:12px; }
+        .detail-panel h1 { margin:0; font-size:20px; color:#4da3ff; }
+        .meta-row, .tags-row { display:flex; gap:8px; flex-wrap:wrap; }
+        .pill { font-size:12px; padding:5px 10px; border-radius:4px; background:#1c2733; color:#c6cdd6; }
+        .pill.start { background:#1565c0; color:#fff; }
+        .pill.end { background:#ad1457; color:#fff; }
+        .tag { font-size:12px; padding:4px 10px; border-radius:12px; background:#22303c; color:#9fd3ff; }
+        table.steps { width:100%; border-collapse:collapse; margin-top:8px; }
+        table.steps th { text-align:left; font-size:12px; color:#7c8794; padding:10px 12px; border-bottom:1px solid #1e2733; }
+        table.steps td { padding:12px; border-bottom:1px solid #17202a; font-size:13px; vertical-align:top; }
+        .badge { display:inline-block; font-size:11px; font-weight:700; padding:3px 10px; border-radius:4px; color:#fff; }
+        .status-pass { background:#43a047; }
+        .status-fail { background:#e53935; }
+        .status-skip { background:#fb8c00; }
+        .status-info { background:#1e88e5; }
+        pre { white-space:pre-wrap; word-break:break-word; font-size:12px; background:#0a0f16; color:#c6cdd6; padding:10px; border-radius:4px; max-height:260px; overflow:auto; margin-top:6px; }
+        pre.error { background:#2a1414; color:#ff9e9e; }
+        .empty { padding:40px; color:#7c8794; }
+    
+</style></head><body>
+<div class="topbar"><span class="logo">&#9635; Reporte de Pruebas</span></div>
+<div class="layout">
+<div class="sidebar"><div class="sidebar-header">Tests</div><div class="test-list">
+<div class="test-item active" onclick="showTest(0)" id="item-0">
+<div class="test-item-main">
+<div class="test-item-name">ActualizarProductoPorId_ActualizaProductoExistente</div>
+<div class="test-item-meta">24/9/2026 2:31 p. m. / 1156,13 ms</div>
+</div>
+<span class="badge status-pass">Pass</span>
+</div>
+<div class="test-item" onclick="showTest(1)" id="item-1">
+<div class="test-item-main">
+<div class="test-item-name">CrearProducto_CreaNuevoProducto</div>
+<div class="test-item-meta">24/9/2026 2:31 p. m. / 373,27 ms</div>
+</div>
+<span class="badge status-pass">Pass</span>
+</div>
+<div class="test-item" onclick="showTest(2)" id="item-2">
+<div class="test-item-main">
+<div class="test-item-name">EndpointInvalido_Retorna404</div>
+<div class="test-item-meta">24/9/2026 2:31 p. m. / 384,28 ms</div>
+</div>
+<span class="badge status-pass">Pass</span>
+</div>
+<div class="test-item" onclick="showTest(3)" id="item-3">
+<div class="test-item-main">
+<div class="test-item-name">ObtenerProductoPorId_RetornaProductoCoincidente</div>
+<div class="test-item-meta">24/9/2026 2:31 p. m. / 367,20 ms</div>
+</div>
+<span class="badge status-pass">Pass</span>
+</div>
+<div class="test-item" onclick="showTest(4)" id="item-4">
+<div class="test-item-main">
+<div class="test-item-name">ObtenerProductos_RetornaEstadoOk</div>
+<div class="test-item-meta">24/9/2026 2:31 p. m. / 369,05 ms</div>
+</div>
+<span class="badge status-pass">Pass</span>
+</div>
+</div></div>
+<div class="details-pane">
+<div class="detail-panel" id="panel-0" style="display:flex">
+<h1>ActualizarProductoPorId_ActualizaProductoExistente</h1>
+<div class="meta-row">
+<span class="pill start">24/9/2026 2:31 p. m.</span>
+<span class="pill end">24/9/2026 2:31 p. m.</span>
+<span class="pill duration">1156,13 ms</span>
+<span class="pill test-id">#test-id=1</span>
+</div>
+<table class="steps">
+<thead><tr><th>STATUS</th><th>TIMESTAMP</th><th>DETAILS</th></tr></thead><tbody>
+<tr><td><span class="badge status-info">Info</span></td><td>sept 24, 2026 2:31:21 p. m.</td><td>Inicio de la prueba</td></tr>
+<tr><td><span class="badge status-info">Info</span></td><td>sept 24, 2026 2:31:22 p. m.</td><td>PUT /products/1 &rarr; Status <strong>200</strong><pre>{&#xA;  &quot;id&quot;: 1,&#xA;  &quot;title&quot;: &quot;Producto actualizado&quot;,&#xA;  &quot;price&quot;: 29.99,&#xA;  &quot;description&quot;: &quot;Descripcion actualizada desde una prueba automatizada&quot;,&#xA;  &quot;image&quot;: &quot;https://www.google.com/url?sa=t\u0026source=web\u0026rct=j\u0026url=https%3A%2F%2Fregularshow.fandom.com%2Fes%2Fwiki%2FBenson\u0026ved=0CBYQjRxqFwoTCIjRo_jah5cDFQAAAAAdAAAAABAF\u0026opi=89978449&quot;,&#xA;  &quot;category&quot;: &quot;electronics&quot;&#xA;}</pre></td></tr>
+<tr><td><span class="badge status-pass">Pass</span></td><td>sept 24, 2026 2:31:22 p. m.</td><td>Se completo la prueba correctamente</td></tr>
+</tbody></table>
+</div>
+<div class="detail-panel" id="panel-1" style="display:none">
+<h1>CrearProducto_CreaNuevoProducto</h1>
+<div class="meta-row">
+<span class="pill start">24/9/2026 2:31 p. m.</span>
+<span class="pill end">24/9/2026 2:31 p. m.</span>
+<span class="pill duration">373,27 ms</span>
+<span class="pill test-id">#test-id=2</span>
+</div>
+<table class="steps">
+<thead><tr><th>STATUS</th><th>TIMESTAMP</th><th>DETAILS</th></tr></thead><tbody>
+<tr><td><span class="badge status-info">Info</span></td><td>sept 24, 2026 2:31:22 p. m.</td><td>Inicio de la prueba</td></tr>
+<tr><td><span class="badge status-info">Info</span></td><td>sept 24, 2026 2:31:23 p. m.</td><td>POST /products &rarr; Status <strong>201</strong><pre>{&#xA;  &quot;id&quot;: 21,&#xA;  &quot;title&quot;: &quot;Producto de prueba&quot;,&#xA;  &quot;price&quot;: 19.99,&#xA;  &quot;description&quot;: &quot;Producto creado desde una prueba automatizada&quot;,&#xA;  &quot;image&quot;: &quot;https://www.google.com/url?sa=t\u0026source=web\u0026rct=j\u0026url=https%3A%2F%2Fregularshow.fandom.com%2Fes%2Fwiki%2FBenson\u0026ved=0CBYQjRxqFwoTCIjRo_jah5cDFQAAAAAdAAAAABAF\u0026opi=89978449&quot;,&#xA;  &quot;category&quot;: &quot;CategorriaPrueba&quot;&#xA;}</pre></td></tr>
+<tr><td><span class="badge status-pass">Pass</span></td><td>sept 24, 2026 2:31:23 p. m.</td><td>Se completo la prueba correctamente</td></tr>
+</tbody></table>
+</div>
+<div class="detail-panel" id="panel-2" style="display:none">
+<h1>EndpointInvalido_Retorna404</h1>
+<div class="meta-row">
+<span class="pill start">24/9/2026 2:31 p. m.</span>
+<span class="pill end">24/9/2026 2:31 p. m.</span>
+<span class="pill duration">384,28 ms</span>
+<span class="pill test-id">#test-id=3</span>
+</div>
+<table class="steps">
+<thead><tr><th>STATUS</th><th>TIMESTAMP</th><th>DETAILS</th></tr></thead><tbody>
+<tr><td><span class="badge status-info">Info</span></td><td>sept 24, 2026 2:31:23 p. m.</td><td>Inicio de la prueba</td></tr>
+<tr><td><span class="badge status-info">Info</span></td><td>sept 24, 2026 2:31:23 p. m.</td><td>GET /productos &rarr; Status <strong>404</strong><pre>&lt;!DOCTYPE html&gt;&#xA;&lt;html lang=&quot;en&quot;&gt;&#xA;&lt;head&gt;&#xA;&lt;meta charset=&quot;utf-8&quot;&gt;&#xA;&lt;title&gt;Error&lt;/title&gt;&#xA;&lt;/head&gt;&#xA;&lt;body&gt;&#xA;&lt;pre&gt;Cannot GET /productos&lt;/pre&gt;&#xA;&lt;script&gt;(function(){function c(){var b=a.contentDocument||(a.contentWindow&amp;&amp;a.contentWindow.document);if(b){var d=b.createElement(&#x27;script&#x27;);d.innerHTML=&quot;window.__CF$cv$params={r:&#x27;a4048d6cba7c19be&#x27;,t:&#x27;MTc5MDI4MTg4Mw==&#x27;};var a=document.createElement(&#x27;script&#x27;);a.src=&#x27;/cdn-cgi/challenge-platform/scripts/jsd/main.js&#x27;;document.getElementsByTagName(&#x27;head&#x27;)[0].appendChild(a);&quot;;b.getElementsByTagName(&#x27;head&#x27;)[0].appendChild(d)}}if(document.body){var a=document.createElement(&#x27;iframe&#x27;);a.height=1;a.width=1;a.style.position=&#x27;absolute&#x27;;a.style.top=0;a.style.left=0;a.style.border=&#x27;none&#x27;;a.style.visibility=&#x27;hidden&#x27;;document.body.appendChild(a);if(&#x27;loading&#x27;!==document.readyState)c();else if(window.addEventListener)document.addEventListener(&#x27;DOMContentLoaded&#x27;,c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);&#x27;loading&#x27;!==document.readyState&amp;&amp;(document.onreadystatechange=e,c())}}}})();&lt;/script&gt;&lt;/body&gt;&#xA;&lt;/html&gt;&#xA;</pre></td></tr>
+<tr><td><span class="badge status-pass">Pass</span></td><td>sept 24, 2026 2:31:23 p. m.</td><td>Se completo la prueba correctamente</td></tr>
+</tbody></table>
+</div>
+<div class="detail-panel" id="panel-3" style="display:none">
+<h1>ObtenerProductoPorId_RetornaProductoCoincidente</h1>
+<div class="meta-row">
+<span class="pill start">24/9/2026 2:31 p. m.</span>
+<span class="pill end">24/9/2026 2:31 p. m.</span>
+<span class="pill duration">367,20 ms</span>
+<span class="pill test-id">#test-id=4</span>
+</div>
+<table class="steps">
+<thead><tr><th>STATUS</th><th>TIMESTAMP</th><th>DETAILS</th></tr></thead><tbody>
+<tr><td><span class="badge status-info">Info</span></td><td>sept 24, 2026 2:31:23 p. m.</td><td>Inicio de la prueba</td></tr>
+<tr><td><span class="badge status-info">Info</span></td><td>sept 24, 2026 2:31:23 p. m.</td><td>GET /products/1 &rarr; Status <strong>200</strong><pre>{&#xA;  &quot;id&quot;: 1,&#xA;  &quot;title&quot;: &quot;Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops&quot;,&#xA;  &quot;price&quot;: 109.95,&#xA;  &quot;description&quot;: &quot;Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday&quot;,&#xA;  &quot;category&quot;: &quot;men\u0027s clothing&quot;,&#xA;  &quot;image&quot;: &quot;https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png&quot;,&#xA;  &quot;rating&quot;: {&#xA;    &quot;rate&quot;: 3.9,&#xA;    &quot;count&quot;: 120&#xA;  }&#xA;}</pre></td></tr>
+<tr><td><span class="badge status-pass">Pass</span></td><td>sept 24, 2026 2:31:23 p. m.</td><td>Se completo la prueba correctamente</td></tr>
+</tbody></table>
+</div>
+<div class="detail-panel" id="panel-4" style="display:none">
+<h1>ObtenerProductos_RetornaEstadoOk</h1>
+<div class="meta-row">
+<span class="pill start">24/9/2026 2:31 p. m.</span>
+<span class="pill end">24/9/2026 2:31 p. m.</span>
+<span class="pill duration">369,05 ms</span>
+<span class="pill test-id">#test-id=5</span>
+</div>
+<table class="steps">
+<thead><tr><th>STATUS</th><th>TIMESTAMP</th><th>DETAILS</th></tr></thead><tbody>
+<tr><td><span class="badge status-info">Info</span></td><td>sept 24, 2026 2:31:23 p. m.</td><td>Inicio de la prueba</td></tr>
+<tr><td><span class="badge status-info">Info</span></td><td>sept 24, 2026 2:31:24 p. m.</td><td>GET /products &rarr; Status <strong>200</strong><pre>[&#xA;  {&#xA;    &quot;id&quot;: 1,&#xA;    &quot;title&quot;: &quot;Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops&quot;,&#xA;    &quot;price&quot;: 109.95,&#xA;    &quot;description&quot;: &quot;Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday&quot;,&#xA;    &quot;category&quot;: &quot;men\u0027s clothing&quot;,&#xA;    &quot;image&quot;: &quot;https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png&quot;,&#xA;    &quot;rating&quot;: {&#xA;      &quot;rate&quot;: 3.9,&#xA;      &quot;count&quot;: 120&#xA;    }&#xA;  },&#xA;  {&#xA;    &quot;id&quot;: 2,&#xA;    &quot;title&quot;: &quot;Mens Casual Premium Slim Fit T-Shirts &quot;,&#xA;    &quot;price&quot;: 22.3,&#xA;    &quot;description&quot;: &quot;Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight \u0026 soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.&quot;,&#xA;    &quot;category&quot;: &quot;men\u0027s clothing&quot;,&#xA;    &quot;image&quot;: &quot;https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png&quot;,&#xA;    &quot;rating&quot;: {&#xA;      &quot;rate&quot;: 4.1,&#xA;      &quot;count&quot;: 259&#xA;    }&#xA;  },&#xA;  {&#xA;    &quot;id&quot;: 3,&#xA;    &quot;title&quot;: &quot;Mens Cotton Jacket&quot;,&#xA;    &quot;price&quot;: 55.99,&#xA;    &quot;description&quot;: &quot;great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.&quot;,&#xA;    &quot;category&quot;: &quot;men\u0027s clothing&quot;,&#xA;    &quot;image&quot;: &quot;https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png&quot;,&#xA;    &quot;rating&quot;: {&#xA;      &quot;rate&quot;: 4.7,&#xA;      &quot;count&quot;: 500&#xA;    }&#xA;  },&#xA;  {&#xA;    &quot;id&quot;: 4,&#xA;    &quot;title&quot;: &quot;Mens Casual Slim Fit&quot;,&#xA;    &quot;price&quot;: 15.99,&#xA;    &quot;description&quot;: &quot;The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.&quot;,&#xA;    &quot;category&quot;: &quot;men\u0027s clothing&quot;,&#xA;    &quot;image&quot;: &quot;https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png&quot;,&#xA;    &quot;rating&quot;: {&#xA;      &quot;rate&quot;: 2.1,&#xA;      &quot;count&quot;: 430&#xA;    }&#xA;  },&#xA;  {&#xA;    &quot;id&quot;: 5,&#xA;    &quot;title&quot;: &quot;John Hardy Women\u0027s Legends Naga Gold \u0026 Silver Dragon Station Chain Bracelet&quot;,&#xA;    &quot;price&quot;: 695,&#xA;    &quot;description&quot;: &quot;From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean\u0027s pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.&quot;,&#xA;    &quot;category&quot;: &quot;jewelery&quot;,&#xA;    &quot;image&quot;: &quot;https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_t.png&quot;,&#xA;    &quot;rating&quot;: {&#xA;      &quot;rate&quot;: 4.6,&#xA;      &quot;count&quot;: 400&#xA;    }&#xA;  },&#xA;  {&#xA;    &quot;id&quot;: 6,&#xA;    &quot;title&quot;: &quot;Solid Gold Petite Micropave &quot;,&#xA;    &quot;price&quot;: 168,&#xA;    &quot;description&quot;: &quot;Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.&quot;,&#xA;    &quot;c... (truncado)</pre></td></tr>
+<tr><td><span class="badge status-pass">Pass</span></td><td>sept 24, 2026 2:31:24 p. m.</td><td>Se completo la prueba correctamente</td></tr>
+</tbody></table>
+</div>
+</div></div>
+<script>
+
+            function showTest(index) {
+                document.querySelectorAll('.detail-panel').forEach(function (el) { el.style.display = 'none'; });
+                document.querySelectorAll('.test-item').forEach(function (el) { el.classList.remove('active'); });
+                document.getElementById('panel-' + index).style.display = 'flex';
+                document.getElementById('item-' + index).classList.add('active');
+            }
+        
+</script></body></html>

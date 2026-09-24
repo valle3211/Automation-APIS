@@ -1,0 +1,29 @@
+# Build
+bin/
+obj/
+
+# VS Code
+.vscode/
+
+# Rider
+.idea/
+
+# Visual Studio
+.vs/
+
+# User files
+*.user
+*.suo
+
+# Logs
+*.log
+
+# Test Results
+./Reportes
+
+# Playwright
+playwright-report/
+
+# OS
+.DS_Store
+Thumbs.db
